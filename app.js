@@ -5,6 +5,7 @@ window.addEventListener('load', ()=>{
     let temperatureDegree = document.querySelector('.temperature-degree');
     let locationTimezone = document.querySelector('.location-timezone');
     let weatherIcon = document.querySelector('.weather-icon');
+    let weatherVid = document.querySelector('.myVideo');
     
     let long;
     let lat;
@@ -22,12 +23,24 @@ window.addEventListener('load', ()=>{
                 return response.json();
             })
             .then(data=>{
-                console.log(data, data.main.temp);
+                const description = data.weather[0].description;
 
                 temperatureDegree.textContent = data.main.temp;
-                temperatureDescription.textContent = data.weather[0].description;
+                temperatureDescription.textContent = description;
                 locationTimezone.textContent = data.name;
                 weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+                
+                if (description.includes("clear")) {
+                    weatherVid.src = "./videos/clearSky.mp4";
+                }else if (description.includes("clouds")) {
+                    weatherVid.src = "./videos/Clouds.mp4";
+                }else if (description.includes("rain")) {
+                    weatherVid.src = "./videos/Rain.mp4";
+                }else if (description.includes("thunderstorm")) {
+                    weatherVid.src = "./videos/Thunder.mp4";
+                } else {
+                    document.body.style.backgroundColor = "blue";
+                }
             })
         });
     }

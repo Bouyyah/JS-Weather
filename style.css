@@ -4,24 +4,52 @@
     box-sizing: border-box;
 }
 
-body{
+/*body{
     height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(rgb(47,150,163), rgb(48,62,143));
     font-family: sans-serif;
-    color: white;
+    color: black;
+    
+}*/
+
+.myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgba(255,255,255, 0.1);
+   
 }
 
 .location, 
 .temperature{
-    height: 30vh;
+  /*  height: 30vh;
     width: 50%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: center;*/
+
+  text-align: center;
+  font-size: 4rem;
+  font-family: sans-serif;
+  padding: 20px;
+  margin: 15px;
+  z-index: 1;
+  opacity: 0.9;
 }
 
 .temperature{
@@ -31,7 +59,7 @@ body{
 .degree-section{
     display: flex;
     align-items: center;
-    cursor: pointer;
+    
 }
 
 .degree-section span{
