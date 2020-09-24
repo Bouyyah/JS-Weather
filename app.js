@@ -48,7 +48,7 @@ function loadData(api){
         weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
         
         if (description.includes("clear")) {
-            weatherVid.src = "./videos/clearSky.mp4";
+            weatherVid.src = "./videos/clear.mp4";
         }else if (description.includes("clouds")) {
             weatherVid.src = "./videos/Clouds.mp4";
         }else if (description.includes("rain")) {
