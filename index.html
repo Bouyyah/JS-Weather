@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="input.css">
     <title>Wheather app</title>
 </head>
 <body>
@@ -11,8 +12,16 @@
     <video autoplay muted loop class="myVideo">
         <source src="" type="video/mp4">
     </video>
+
+
     
     <div class="section">
+
+        <div class="form__group">
+            <input type="text" class="form__input" id="city" placeholder="City name" required="" />
+            <label for="name" class="form__label">City name</label>
+        </div>
+
         <div class="location">
             <h1 class="location-timezone">Timezone</h1>
             <img src="" alt="icon" class="weather-icon">
@@ -24,7 +33,10 @@
             </div>  
             <div class="temperature-description">It's getting cold</div>
         </div>
+
     </div>
+
+    
 
     <script src="./app.js"></script>
 </body>

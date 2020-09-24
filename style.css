@@ -4,16 +4,9 @@
     box-sizing: border-box;
 }
 
-/*body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    font-family: sans-serif;
-    color: black;
-    
-}*/
+body{
+  
+}
 
 .myVideo {
     position: fixed;
